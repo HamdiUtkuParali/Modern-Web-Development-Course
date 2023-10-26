@@ -12,17 +12,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" media="(max-width:768px)" href="css/tablet.css">
     <link rel="stylesheet" media="(max-width:500px)" href="css/mobile.css">
 </head>
+
 <body>
-    <header class = "bg-dark-blue">
+    <header class="bg-dark-blue">
         <div class="container">
-            <nav id="navbar"> 
+            <nav id="navbar">
                 <h1 class="heading-small">Hamdi Utku Paralı</h1>
                 <ul>
                     <li><a href="#home">Ana Sayfa</a> </li>
@@ -36,7 +37,7 @@
 
     <section id="home">
         <img src="Images/DefaultAvatar.jpg" alt="DefaultUser">
-        
+
         <div class="name text center">
             <h2 class="heading-big">Hamdi Utku Paralı</h2>
             <p>Computer Engineer | Software Developer </p>
@@ -70,6 +71,104 @@
             </article>
         </div>
     </section>
+
+    <section id="courses">
+        <h3 class="text-center heading-medium">Kurslar</h3>
+        <div class="container">
+            <div class="courses">
+                <!-- Course1 -->
+                <div class="course">
+                    <div class="course-image">
+                        <img src="Images/PythonLogo.png" alt="Python">
+                        <span>%90 İndirim</span>
+                    </div>
+                    <div class="course-info">
+                        <div class="title">
+                            Temel Seviye Python Kursu
+                        </div>
+                        <div class="description">
+                            Sıfırdan Python Öğrenin!
+                        </div>
+                        <div class="instructor">
+                            Hamdi Utku Paralı
+                        </div>
+                        <div class="rating">
+                            4.6 | (7000 Oylama)
+                        </div>
+                    </div>
+                </div>
+                <!-- Course2 -->
+                <div class="course">
+                    <div class="course-image">
+                        <img src="Images/JavaLogo.png" alt="Java">
+                        <span>%50 İndirim</span>
+                    </div>
+                    <div class="course-info">
+                        <div class="title">
+                            Java ile algoritmalar
+                        </div>
+                        <div class="description">
+                            Java dilini öğrenerek algoritma kurma becerinizi geliştirin.
+                        </div>
+                        <div class="instructor">
+                            Alper Kartal
+                        </div>
+                        <div class="rating">
+                            4.2 | (10000 Oylama)
+                        </div>
+                    </div>
+                </div>
+                <!-- Course3 -->
+                <div class="course">
+                    <div class="course-image">
+                        <img src="Images/CSharpLogo.png" alt="CSharp">
+                        <span>%25 İndirim</span>
+                    </div>
+                    <div class="course-info">
+                        <div class="title">
+                            İleri seviye C# Eğitimi
+                        </div>
+                        <div class="description">
+                            İleri seviyede C# eğitimi
+                        </div>
+                        <div class="instructor">
+                            Yasin Özbek
+                        </div>
+                        <div class="rating">
+                            3.8 | (5000 Oylama)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-dark-blue">
+        <div class="contact-form">
+            <form>
+                <h4 class="text-center heading-medium">Bana Ulaşın</h4>
+                <div class="form-group">
+                    <label for="name">İsim</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="İsim">
+                </div>
+                <div class="form-group">
+                    <label for="email">İsim</label>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="E-Mail">
+                </div>
+                <div class="form-group">
+                    <label for="message">İsim</label>
+                    <textarea name="message" id="message" class="form-control" rows="10" placeholder="Mesajınız..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-block">Gönder</button>
+            </form>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>

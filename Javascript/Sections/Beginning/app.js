@@ -1,0 +1,1 @@
+alert("Bu mesaj app.js dosyasında yazılmıştır.")

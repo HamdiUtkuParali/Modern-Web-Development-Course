@@ -3,26 +3,28 @@
 eventListeners();
 
 function eventListeners(){
-    document.getElementById("translate-form").addEventListener("submit",translateWord);
+    document.getElementById("translate-form").addEventListener("submit",translateFunc);
     document.getElementById("language").onchange = function(){
         //Arayüz işlemleri
+        ui.changeUI();
     }
 
 }
 
-let inputText = document.getElementById("word").value;
-let selectedLang = document.getElementById("language").value;
-const translate = new Translate(inputText,selectedLang);
+const translate = new Translate();
+const ui = new UI();
 
-function translateWord(e){
+function translateFunc(e){
 
-    translate.changeParameters(inputText,selectedLang);
-    translate.translateWord(function(err,response){
+    let inputText = document.getElementById("word").value;
+    let selectedLang = document.getElementById("language").value;
+
+    translate.translateWord(inputText,selectedLang,function(err,response){
         if(err){
             console.log(err);
         }
         else{
-            console.log(response);
+            ui.displayTranslate(response);
         }
     });
 

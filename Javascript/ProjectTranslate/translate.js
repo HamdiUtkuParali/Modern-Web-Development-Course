@@ -1,13 +1,11 @@
-function Translate(word,language){
-    this.apikey = "";
-    this.word = word;
-    this.language = language;
+function Translate(){
+    this.apikey = "AIzaSyArg-DrgZ9xIDLHI81w7NRUnmSz4NRThs4";
     this.xhr = new XMLHttpRequest();
 }
 
-Translate.prototype.translateWord = function(callback){
+Translate.prototype.translateWord = function(word,lang,callback){
     //Ajax işlemleri
-    const endpoint = `https://translation.googleapis.com/language/translate/v2?key=${this.apikey}&q=${this.word}&target=${this.language}`;
+    const endpoint = `https://translation.googleapis.com/language/translate/v2?key=${this.apikey}&q=${word}&target=${lang}`;
     
     this.xhr.open("GET",endpoint);
 
@@ -24,8 +22,3 @@ Translate.prototype.translateWord = function(callback){
 
     this.xhr.send();
 };
-
-Translate.prototype.changeParameters = function(newWord,newLanguage){
-    this.word = newWord;
-    this.language = newLanguage;
-}

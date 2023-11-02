@@ -1,5 +1,5 @@
 function Translate(word,language){
-    this.apikey = "AIzaSyArg-DrgZ9xIDLHI81w7NRUnmSz4NRThs4";
+    this.apikey = "";
     this.word = word;
     this.language = language;
     this.xhr = new XMLHttpRequest();

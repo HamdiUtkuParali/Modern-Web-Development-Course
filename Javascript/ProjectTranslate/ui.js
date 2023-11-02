@@ -6,8 +6,8 @@ function UI(){
 }
 
 UI.prototype.changeUI = function(){
-    this.outputImage.src=`images/${this.languageList.value}.png`;
     this.outputLanguage.innerHTML = this.languageList.options[this.languageList.selectedIndex].textContent ;
+    this.outputImage.src=`images/${this.languageList.value}.png`;
 }
 
 UI.prototype.displayTranslate = function(word) {

@@ -12,7 +12,6 @@ Translate.prototype.translateWord = function(word,lang,callback){
     this.xhr.onload = () =>{
         if(this.xhr.status === 200){
             const text = JSON.parse(this.xhr.responseText).data.translations[0].translatedText ;
-            console.log(text);
             callback(null,text);
         }
         else{

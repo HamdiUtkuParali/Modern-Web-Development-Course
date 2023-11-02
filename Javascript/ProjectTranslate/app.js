@@ -1,21 +1,16 @@
 // Prototype,Ajax,Callback
 
-eventListeners();
-
-function eventListeners(){
-    document.getElementById("translate-form").addEventListener("submit",translateFunc);
-    document.getElementById("language").onchange = function(){
-        //Arayüz işlemleri
-        ui.changeUI();
-    }
-
-}
-
 const translate = new Translate();
 const ui = new UI();
 
-function translateFunc(e){
+eventListeners();
 
+function eventListeners(){
+    document.getElementById("translate-form").addEventListener("submit",translater);
+}
+
+
+function translater(e){
     let inputText = document.getElementById("word").value;
     let selectedLang = document.getElementById("language").value;
 
@@ -27,7 +22,7 @@ function translateFunc(e){
             ui.displayTranslate(response);
         }
     });
-
-
+    
+    ui.changeUI();
     e.preventDefault();
 }

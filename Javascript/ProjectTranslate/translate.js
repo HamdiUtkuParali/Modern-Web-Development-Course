@@ -1,5 +1,5 @@
 function Translate(){
-    this.apikey = "";
+    this.apikey = "AIzaSyArg-DrgZ9xIDLHI81w7NRUnmSz4NRThs4";
     this.xhr = new XMLHttpRequest();
 }
 

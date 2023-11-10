@@ -1,9 +1,13 @@
 
 
+using ASPNetCoreIntro.Service.Logging;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IMyLogger,DatabaseLogger>();
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -15,8 +19,11 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+//middleware
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.UseSession();
 
 app.UseRouting();
 
@@ -24,9 +31,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Customer}/{action=SaveCustomer}/{id?}");
-app.MapControllerRoute(
-    name: "admin",
-    pattern: "admin/{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

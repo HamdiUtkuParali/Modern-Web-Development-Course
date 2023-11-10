@@ -1,6 +1,6 @@
 ﻿namespace ASPNetCoreIntro.Service.Logging
 {
-    public class FileLogger : ILogger
+    public class FileLogger : IMyLogger
     {
         public void Log(string message)
         {

@@ -1,23 +1,22 @@
 ﻿using ASPNetCoreIntro.Entities;
 using ASPNetCoreIntro.Models;
+using ASPNetCoreIntro.Service.Logging;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ASPNetCoreIntro.Controllers
 {
-    [Route("deneme")]
     public class CustomerController : Controller
     {
-        private ILogger _logger;
-        public CustomerController(ILogger logger)
+        IMyLogger _logger;
+        public CustomerController(IMyLogger logger)
         {
             _logger = logger;
         }
 
-        [Route("index")]
-        [Route("")]
         public IActionResult Index3()
         {
+            _logger.Log("");
             List<Customer> customer = new List<Customer>
             {
                 new Customer {Id = 1, FirstName="Engin", LastName="Demiroğ", City="Ankara"},
@@ -37,7 +36,6 @@ namespace ASPNetCoreIntro.Controllers
         }
 
         // belirtilmezse varsayılan olarak [HttpGet] 'dir.
-        [Route("save")]
         public IActionResult SaveCustomer()
         {
             return View(new SaveCustomerViewModel
@@ -52,7 +50,6 @@ namespace ASPNetCoreIntro.Controllers
         }
 
         [HttpPost]
-        [Route("save")]
         public string SaveCustomer(Customer customer)
         {
             return "Kaydedildi";

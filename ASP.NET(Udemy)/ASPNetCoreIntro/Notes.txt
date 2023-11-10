@@ -6,3 +6,4 @@ Section -->  Layout'a benzer ancak genelden ziyade daha çok özel kullanım iç
 Client Side Library --> HTML5 CSS Javascript dillerinde yazılan kod taslakları(örnek: Bootstrap, Skeleton). wwwroot klasöründe bulunurlar. head'in içinde link verilerek koda dahil edilir.
 Conventional Routing --> program.cs'de bulunur. endpoint'lerin hangi durumlarda nasıl davranacağının genel olarak belirlenmesidir.
 Attribute Routing --> endpoint'lerin hangi durumlarda nasıl davranacağının daha özel(method,class vs) bir şekilde belirlenmesidir.
+Session --> Web teknolojileri default olarak unutmaya programlanmıştır. Unutulmamasını istediğimiz şeyler için session kullanırız.

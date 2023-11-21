@@ -39,13 +39,18 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><strong>Puan</strong>:
-                                    <asp:Label ID="Label6" runat="server" Text='<%# Eval("GununYemegiPuan") %>'></asp:Label>
-                                </td>
+                                <td>&nbsp;</td>
                             </tr>
                             <tr>
-                                <td><strong>Tarih</strong>:
-                                    <asp:Label ID="Label7" runat="server" Text='<%# Eval("GununYemegiTarih") %>'></asp:Label>
+                                <td>
+                                    <table class="auto-style4">
+                                        <tr>
+                                            <td><strong>Puan</strong>:&nbsp;<asp:Label ID="Label6" runat="server" Text='<%# Eval("GununYemegiPuan") %>'></asp:Label>
+                                            </td>
+                                            <td style="text-align: right"><strong>Tarih</strong>:&nbsp;<asp:Label ID="Label7" runat="server" Text='<%# Eval("GununYemegiTarih") %>'></asp:Label>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </td>
                             </tr>
                         </table>
